@@ -1,3 +1,25 @@
+
+.timeline
+{
+    padding: 0;
+    margin: 20px;
+    font-family: Microsoft YaHei, "å¾®è½¯é›…é»‘";
+    list-style: none;
+}
+
+.timeline:before
+{
+    content: '';
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    /* height: 100px; */
+    width: 10px;
+    background: #afdcf8;
+    margin-left: 120px;
+}
+
+
 .timeline-content
 {
     margin: 0 0 15px 155px;
@@ -24,8 +46,6 @@
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
-
-
 .timeline-time
 {
     padding-top: 5px;
@@ -50,10 +70,6 @@
     background-color:#afdcf8;
 
 }
-.timeline-time:before:after
-{
-    background-color: #3594cb;
-}
 
 
 .timeline-content:after
@@ -71,27 +87,80 @@
 }
 
 
-.timeline:before
-{
-    content: '';
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    background: #afdcf8;
-    margin-left: 120px;
-}
-
-.timeline
-{
-    padding: 0;
-    margin: 20px;
-    font-family: Microsoft YaHei, "΢���ź�";
-    list-style: none;
-}
 
 .timeline-time:hover+.timeline-content,.timeline-content:hover
 {
     color: #eee;
+}
+
+
+.timeline-vertical
+{
+    padding: 0;
+    margin: 20px;
+    font-family: Microsoft YaHei, "å¾®è½¯é›…é»‘";
+    list-style: none;
+}
+
+.timeline-vertical:before
+{
+    content: '';
+    margin: 0 15% 0 10%;
+    position:absolute;
+    top:40px;
+    left: 0px;
+    right: 0px;
+    height: 10px;
+    background: #afdcf8;
+    z-index: -1;
+}
+
+.timeline-vertical>li
+{
+    position: relative;
+    margin:0  6%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color:#afdcf8;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bolder;
+    color: #FFFFFF;
+}
+.vertical-content
+{
+    /* display: none; */
+    position:absolute;
+    top: 30px;
+    height: 30px;
+    width: 140px;
+    overflow: visible;
+    line-height: 30px;
+    text-align: center;
+    left: -55px;
+
+    color:#afdcf8;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+
+.timeline-vertical>li:hover
+{
+    background-color:#3594cb;
+}
+
+.timeline-vertical>li.active
+{
+    background-color:#3594cb;
+}
+
+li.active>.vertical-content,li:hover>.vertical-content
+{
+    color:#3594cb;
+    display: block;
 }
 
